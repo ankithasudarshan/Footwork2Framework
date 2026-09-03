@@ -11,21 +11,27 @@ of that project except:
   external S3 bucket (`bharatnatyambucket.s3.us-east-1.amazonaws.com`), which is
   unchanged and outside this repo.
 
-## Known limitations carried over from the original
+## Backend / `/api/*` endpoints — resolved
 
-The site is a Vite/React SPA with an Express backend. GitHub Pages only serves the
-static front-end, so these sections fetch from `/api/...` endpoints that do not
-exist on Pages (this is already the case on the collaborator's live site):
+The site is a Vite/React SPA that in the original also had an Express backend serving
+`/api/timeline`, `/api/cultural`, `/api/poses`. GitHub Pages has no backend, so those
+calls always 404ed.
 
-- Timeline section (`/api/timeline`)
-- About / Cultural elements (`/api/cultural`)
-- Pose Library (`/api/poses`)
+What was actually on the page: `home.tsx` renders About, F2F Dataset, F2F 3D,
+Pipeline, AI Co-Dance, Pose Library, Other Use Cases, Data Access, Footer. It does
+**not** render `TimelineSection` or `CulturalElementGrid` (imported but unused), so
+those two never mattered. The two rendered components that *did* make doomed fetches
+were `AboutSection` (fetched `/api/cultural` but never used the result) and
+`PoseLibrary` (fetched `/api/poses`, already had a local fallback).
 
-They will render empty or in a loading state. Fixing this (baking the data in as
-static JSON) is the planned follow-up — see "Fix later" below.
+All four components were switched to inline static data (from `server/storage.ts`
+seed data) and the `useQuery`/`/api/*` calls removed. The rendered page now has **no
+backend dependency**. `server/` is left in the repo (the build's `esbuild` step still
+bundles it) but nothing on Pages uses it.
 
-Working sections: hero, F2F dataset, F2F 3D, pipeline, AI co-dance, other use cases,
-data access, footer, and all S3-hosted demo videos.
+Still external: the demo videos and diagram images, which stream from the S3 bucket
+`bharatnatyambucket.s3.us-east-1.amazonaws.com` (owned by a collaborator). Rehosting
+those is the remaining task — see "Media rehost" below.
 
 ## One-time setup
 
@@ -58,13 +64,17 @@ git branch -M main
 git push -u origin main
 ```
 
-## Fix later (make it fully self-contained)
+## Media rehost (remaining task)
 
-Convert the three `/api/*` endpoints (their data is hard-coded in
-`server/storage.ts` — timeline events, dance poses, cultural elements) into static
-JSON files under `client/public/api/`, and repoint the four `useQuery` calls in
-`client/src/components/{about-section,cultural-components,pose-library,timeline-section}.tsx`
-at those files using `import.meta.env.BASE_URL`. Also fix the `./src/images/...`
-`imageUrl` values in the seed data so they resolve in the build. After that the
-backend and the S3 dependency for the page's own images go away (demo videos still
-come from S3).
+The 37 video/image files the page loads from the collaborator's S3 bucket are
+downloaded and size-verified in `_media_staging/` (gitignored, ~376 MB). Plan:
+
+1. Upload them to a free host with no egress fees — **Cloudflare R2** (10 GB free,
+   $0 egress) is the pick; GitHub Releases on this repo also works.
+2. Find-and-replace `https://bharatnatyambucket.s3.us-east-1.amazonaws.com/` with the
+   new base URL across `client/src` (and the one occurrence in
+   `client/src/components/timeline-section.tsx`'s static data).
+3. Commit and push; the workflow redeploys.
+
+Keep the URL-encoded object keys as-is (`chunk%3D000-...`, `Arun+1.mp4`) — R2 decodes
+percent-encoding the same way S3 does.
