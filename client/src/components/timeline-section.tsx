@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -14,26 +13,55 @@ import {
   slideInRight,
 } from "@/lib/animations";
 import type { TimelineEvent } from "@shared/schema";
+import templeImg from "@/images/bharatnatyam_temple_2.jpg";
+import revivalImg from "@/images/bharatnatyam_revival.avif";
+
+// Static content (previously served from the /api/timeline endpoint).
+const timelineData: TimelineEvent[] = [
+  {
+    id: 1,
+    year: "500 BCE",
+    era: "past",
+    title: "Origins in Temple Worship",
+    description:
+      "Bharatanatyam emerged from the sacred halls of South Indian temples, where devadasis (temple dancers) performed as offerings to the divine.",
+    imageUrl: templeImg,
+    significance:
+      "Established the spiritual foundation and sacred geometry of classical Indian dance",
+    innovations: null,
+    keyFigures: null,
+  },
+  {
+    id: 2,
+    year: "1940",
+    era: "past",
+    title: "Revival Movement",
+    description:
+      "Rukmini Devi Arundale's revolutionary efforts to revive and refine Bharatanatyam, transforming it from temple tradition to concert stage.",
+    imageUrl: revivalImg,
+    significance:
+      "Brought respectability and artistic recognition to the dance form",
+    innovations: null,
+    keyFigures: null,
+  },
+  {
+    id: 3,
+    year: "2025",
+    era: "present",
+    title: "Digital Heritage Platform",
+    description:
+      "Revolutionary AI-powered platform for preserving, teaching, and evolving Bharatanatyam through interactive digital experiences.",
+    imageUrl:
+      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/ref_smpl.mp4",
+    significance:
+      "Bridging ancient wisdom with cutting-edge technology for future generations",
+    innovations: null,
+    keyFigures: null,
+  },
+];
 
 export function TimelineSection() {
-  const { data: timelineEvents, isLoading } = useQuery<TimelineEvent[]>({
-    queryKey: ["/api/timeline"],
-  });
-
-  if (isLoading) {
-    return (
-     <div className="pt-0 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <div className="animate-pulse">
-              <div className="h-8 bg-[#b38000]/20 rounded w-64 mx-auto mb-4"></div>
-              <div className="h-4 bg-gray-700 rounded w-96 mx-auto"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const timelineEvents = timelineData;
 
   const groupedEvents = timelineEvents?.reduce((acc, event) => {
     if (!acc[event.era]) {

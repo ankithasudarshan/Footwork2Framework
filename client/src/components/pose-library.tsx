@@ -1,6 +1,5 @@
 // components/PoseLibrary.tsx
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import {
   Card, CardContent, CardDescription, CardHeader, CardTitle,
@@ -108,27 +107,8 @@ const localPoses: DancePose[] = poseData.map((p, i) => ({
 export function PoseLibrary() {
   const [selectedPose, setSelectedPose] = useState<DancePose | null>(null);
 
-  const { data: apiPoses, isLoading } = useQuery<DancePose[]>({
-    queryKey: ["/api/poses"],
-  });
-
-  // Prefer API data if present; otherwise use your local data
-  const poses: DancePose[] = apiPoses?.length ? apiPoses : localPoses;
-
-  if (isLoading && !apiPoses?.length) {
-    return (
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="animate-pulse">
-              <div className="h-8 bg-[#b38000]/20 rounded w-64 mx-auto mb-4"></div>
-              <div className="h-4 bg-gray-700 rounded w-96 mx-auto"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // Static content (previously fetched from /api/poses, with this same local fallback).
+  const poses: DancePose[] = localPoses;
 
   return (
     <section className="py-20 bg-white" id="pose-library">

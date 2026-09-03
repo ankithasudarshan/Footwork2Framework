@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import {
   fadeInUp,
@@ -6,13 +5,9 @@ import {
   slideInRight,
   staggerContainer,
 } from "@/lib/animations";
-import type { CulturalElement } from "@shared/schema";
 import { useRef, useEffect } from "react";
 
 export function AboutSection() {
-  const { data: culturalElements, isLoading } = useQuery<CulturalElement[]>({
-    queryKey: ["/api/cultural"],
-  });
 
   const syncedVideo1Ref = useRef<HTMLVideoElement>(null);
   const syncedVideo2Ref = useRef<HTMLVideoElement>(null);
@@ -43,19 +38,6 @@ export function AboutSection() {
       return () => clearInterval(interval);
     }
   }, []);
-
-  if (isLoading) {
-    return (
-      <div className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="animate-pulse">
-            <div className="h-8 bg-temple-gold/20 rounded w-64 mx-auto mb-4"></div>
-            <div className="h-4 bg-gray-700 rounded w-96 mx-auto"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <section id="about" className="py-20 bg-white">

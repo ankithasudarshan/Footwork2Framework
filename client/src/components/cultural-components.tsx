@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -10,15 +9,54 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { fadeInUp } from "@/lib/animations";
 import type { CulturalElement } from "@shared/schema";
+import geometryImg from "@/images/bharatnatyam_geometry.avif";
+import mudraImg from "@/images/bharatnatyam_mudra.jpg";
+import symmetryImg from "@/images/bharatnatyam_symmetry.jpg";
+
+// Static content (previously served from the /api/cultural endpoint).
+const culturalData: CulturalElement[] = [
+  {
+    id: 1,
+    name: "Bharatanatyam Pose Geometry",
+    type: "geometry",
+    description:
+      "Canonical postures defined by angular placement of limbs and symmetric body alignments",
+    origin: "Natya Shastra and temple sculpture poses",
+    significance:
+      "Encodes meaning through structured joint articulation and balance",
+    modernAdaptation:
+      "Digitized using motion capture and SMPL-X skeletal modeling",
+    imageUrl: geometryImg,
+  },
+  {
+    id: 2,
+    name: "Mudra Hand Configurations",
+    type: "gesture",
+    description:
+      "Hand gestures with defined finger positions representing symbolic meaning",
+    origin: "Classical dance treatises and iconography",
+    significance:
+      "Expresses narrative elements through geometric precision of fingers",
+    modernAdaptation:
+      "Mapped to 3D hand skeletons (MANO) for real-time synthesis",
+    imageUrl: mudraImg,
+  },
+  {
+    id: 3,
+    name: "Symmetry in Bharatanatyam",
+    type: "aesthetic-principle",
+    description:
+      "Use of bilateral symmetry and axis-based alignment in choreography",
+    origin: "Temple sculpture and spiritual mandala structures",
+    significance: "Creates visual harmony and geometric balance in motion",
+    modernAdaptation:
+      "Analyzed using AI pose graphs and rendered as motion skeletons",
+    imageUrl: symmetryImg,
+  },
+];
 
 export function CulturalElementGrid() {
-  const { data: culturalElements, isLoading } = useQuery<CulturalElement[]>({
-    queryKey: ["/api/cultural"],
-  });
-
-  if (isLoading) {
-    return <p className="text-center text-[#9c1c1c]">Loading cultural elements...</p>;
-  }
+  const culturalElements = culturalData;
 
   if (!culturalElements || culturalElements.length === 0) {
     return <p className="text-center text-[#999999]">No cultural elements found.</p>;
