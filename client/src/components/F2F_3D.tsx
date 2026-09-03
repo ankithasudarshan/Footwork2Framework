@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 
 const meshVideos = [
-  { title: "Mesh View 01", src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Arun1.mp4" },
-  { title: "Mesh View 02", src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Arun+1.mp4" },
-  { title: "Mesh View 03", src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Arun+1_black.mp4" },
+  { title: "Mesh View 01", src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Arun1.mp4" },
+  { title: "Mesh View 02", src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Arun+1.mp4" },
+  { title: "Mesh View 03", src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Arun+1_black.mp4" },
 ];
 
 function MeshVideoTile({ title, src }: { title: string; src: string }) {
@@ -71,12 +71,12 @@ export function F2F3DSection() {
           viewport={{ once: true }}
         >
           <img
-            src="https://bharatnatyambucket.s3.us-east-1.amazonaws.com/F2F-3D.png"
+            src="https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/F2F-3D.png"
             alt="3D Mesh Image 1"
             className="w-full rounded-lg shadow-md border border-gray-300"
           />
           <img
-            src="https://bharatnatyambucket.s3.us-east-1.amazonaws.com/F2F-3D_hands.png"
+            src="https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/F2F-3D_hands.png"
             alt="3D Mesh Image 2"
             className="w-full rounded-lg shadow-md border border-gray-300"
           />

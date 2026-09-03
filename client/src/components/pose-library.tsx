@@ -25,8 +25,8 @@ const poseData: InsertDancePose[] = [
     description:
       "A foundational Bharatanatyam adavu characterized by sharp stamping and forceful hand gestures, symbolizing strength and determination.",
     videoUrls: [
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/KattiAdavu.mp4",
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D001-ref_bluedancer_chunk_001katti.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/KattiAdavu.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D001-ref_bluedancer_chunk_001katti.mp4",
     ],
     symbolism:
       "Represents clenched strength or gripping force, often used to portray valor or intense emotion.",
@@ -37,8 +37,8 @@ const poseData: InsertDancePose[] = [
     description:
       "A complex sequence in Bharatanatyam that links multiple adavus into a rhythmic pattern, showcasing the dancer’s control, memory, and precision.",
     videoUrls: [
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Korvai_Adavu.mp4",
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D002-ref_bluedancer_chunk_002.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Korvai_Adavu.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D002-ref_bluedancer_chunk_002.mp4",
     ],
     symbolism:
       "Represents intricacy and mastery; often used as a climactic highlight in pure dance segments.",
@@ -49,8 +49,8 @@ const poseData: InsertDancePose[] = [
     description:
       "A dynamic Bharatanatyam adavu performed close to the ground with bent knees or squatting jumps, demanding agility and strength.",
     videoUrls: [
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Mandi_Adavu.mp4",
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D000-ref_bluedancer_chunk_000.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Mandi_Adavu.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D000-ref_bluedancer_chunk_000.mp4",
     ],
     symbolism:
       "Signifies humility, surrender, or moments of intense emotion; reflects grounded energy and devotion.",
@@ -61,8 +61,8 @@ const poseData: InsertDancePose[] = [
     description:
       "A foundational Bharatanatyam adavu characterized by stretched leg movements and striking the floor with the heel, synchronized with elegant arm positions.",
     videoUrls: [
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Natt_adavu.mp4",
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D001-ref_bluedancer_chunk_001.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Natt_adavu.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D001-ref_bluedancer_chunk_001.mp4",
     ],
     symbolism:
       "Symbolizes grace, rhythm, and control—used extensively in pure dance sequences to establish tempo and posture.",
@@ -73,8 +73,8 @@ const poseData: InsertDancePose[] = [
     description:
       "A graceful Bharatanatyam adavu that involves sweeping, gliding movements across the stage, symbolizing flow and expansion.",
     videoUrls: [
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/ParavalAdavu1.2_part0.mp4",
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/blue_chunk_paraval_Adavu.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/ParavalAdavu1.2_part0.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/blue_chunk_paraval_Adavu.mp4",
     ],
     symbolism:
       "Represents spreading, flying, or expansive movement—used to convey transitions, joy, or grandeur.",
@@ -85,8 +85,8 @@ const poseData: InsertDancePose[] = [
     description:
       "A sliding movement-based Bharatanatyam adavu where the feet glide across the floor with fluidity and grace, often accompanied by soft arm gestures.",
     videoUrls: [
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Sarukkal_Adavu.mp4",
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D000-ref_bluedancer_chunk_000saru.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Sarukkal_Adavu.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D000-ref_bluedancer_chunk_000saru.mp4",
     ],
     symbolism:
       "Symbolizes smooth transition, stealth, or elegance—used to portray gliding motions, delicate approaches, or emotional subtlety.",

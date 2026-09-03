@@ -35,23 +35,23 @@ export function OtherUseCasesSection() {
         >
           {[
             {
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D002-ref_anime_chunk_002.mp4",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D002-ref_anime_chunk_002.mp4",
             },
              {
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D000-ref_moana_chunk_000.mp4",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D000-ref_moana_chunk_000.mp4",
             },
              {
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D003-ref_realman_chunk_003.mp4",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D003-ref_realman_chunk_003.mp4",
             },
             {
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D003-ref_humanoid_chunk_003.mp4",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D003-ref_humanoid_chunk_003.mp4",
             },
              {
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D002-ref_back_swan_nat_port_chunk_002.mp4",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D002-ref_back_swan_nat_port_chunk_002.mp4",
             },
         
             {
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/chunk%3D002-ref_pop_chunk_002.mp4",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/chunk%3D002-ref_pop_chunk_002.mp4",
             } 
            
           ].map((item, i) => (

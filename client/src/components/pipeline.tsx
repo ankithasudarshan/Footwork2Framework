@@ -21,15 +21,15 @@ export function PipelineSection() {
           {[
             {
               title: "Data Preprocessing Stage",
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/data_preprocessing.png",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/data_preprocessing.png",
             },
             {
               title: "Feature Extraction Stage",
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/stitching.png",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/stitching.png",
             },
             {
               title: "Model Training Stage",
-              src: "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/vae.png",
+              src: "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/vae.png",
             },
           ].map((img, index) => (
             <div

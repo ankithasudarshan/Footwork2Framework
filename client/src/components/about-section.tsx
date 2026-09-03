@@ -112,7 +112,7 @@ export function AboutSection() {
                 loop
                 muted
                 playsInline
-                src="https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Purawai_intro+.mov"
+                src="https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Purawai_intro+.mov"
               />
               <video
                 className="rounded-lg shadow-lg w-full h-64 object-cover"
@@ -120,7 +120,7 @@ export function AboutSection() {
                 loop
                 muted
                 playsInline
-                src="https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Purwai_+chunk_000.mp4"
+                src="https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Purwai_+chunk_000.mp4"
               />
             </div>
 
@@ -131,7 +131,7 @@ export function AboutSection() {
             <div className="grid grid-cols-2 gap-4">
               <video
                 ref={syncedVideo1Ref}
-                src="https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Natesh+Kautvam+%EF%BD%9C+Bharatanatyam+%EF%BD%9C+Sachhid+2.mov"
+                src="https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Natesh+Kautvam+%EF%BD%9C+Bharatanatyam+%EF%BD%9C+Sachhid+2.mov"
                 className="rounded-lg shadow-lg w-full h-64 object-cover"
                 autoPlay
                 loop
@@ -140,7 +140,7 @@ export function AboutSection() {
               />
               <video
                 ref={syncedVideo2Ref}
-                src="https://bharatnatyambucket.s3.us-east-1.amazonaws.com/Sachid_chunk_001.mp4"
+                src="https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/Sachid_chunk_001.mp4"
                 className="rounded-lg shadow-lg w-full h-64 object-cover"
                 autoPlay
                 loop

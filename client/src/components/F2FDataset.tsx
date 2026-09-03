@@ -43,7 +43,7 @@ export function F2FDatasetSection() {
                     <div className="inline-block overflow-hidden rounded-2xl shadow-lg bg-white">
                         <div className="relative">
                             <img
-                                src="https://bharatnatyambucket.s3.us-east-1.amazonaws.com/five_dancer.png"
+                                src="https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/five_dancer.png"
                                 alt="F2F Sample montage of annotated dance frames"
                                 className="block object-contain w-[600px] max-w-full rounded-2xl"
                             />

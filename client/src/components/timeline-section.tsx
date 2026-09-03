@@ -52,7 +52,7 @@ const timelineData: TimelineEvent[] = [
     description:
       "Revolutionary AI-powered platform for preserving, teaching, and evolving Bharatanatyam through interactive digital experiences.",
     imageUrl:
-      "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/ref_smpl.mp4",
+      "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/ref_smpl.mp4",
     significance:
       "Bridging ancient wisdom with cutting-edge technology for future generations",
     innovations: null,
@@ -213,7 +213,7 @@ export function TimelineSection() {
                         >
                           <source
                             src={
-                              event.imageUrl || "https://bharatnatyambucket.s3.us-east-1.amazonaws.com/ref_smpl.mp4"
+                              event.imageUrl || "https://pub-68f62f54c8da474b9204d5cb760a9258.r2.dev/_media_staging/ref_smpl.mp4"
                             }
                             type="video/mp4"
                           />
