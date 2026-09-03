@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(42, 100%, 97%); /* Light beige */
+  --foreground: hsl(42, 100%, 30%); /* Deep golden brown */
+  --muted: hsl(42, 30%, 90%);
+  --muted-foreground: hsl(42, 100%, 30%);
+  --popover: hsl(42, 100%, 97%);
+  --popover-foreground: hsl(42, 100%, 30%);
+  --card: hsl(42, 100%, 97%);
+  --card-foreground: hsl(42, 100%, 30%);
+  --border: hsl(42, 30%, 80%);
+  --input: hsl(42, 30%, 80%);
+  --primary: hsl(43, 100%, 35%); /* Rich temple gold */
+  --primary-foreground: hsl(42, 100%, 97%);
+  --secondary: hsl(42, 30%, 85%);
+  --secondary-foreground: hsl(42, 100%, 30%);
+  --accent: hsl(42, 40%, 90%);
+  --accent-foreground: hsl(42, 100%, 30%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(42, 100%, 97%);
+  --ring: hsl(43, 100%, 35%);
+  --radius: 0.5rem;
+
+  /* Cultural color palette */
+  --temple-gold: hsl(43, 100%, 35%);
+  --deep-red: hsl(0, 100%, 27%);
+  --temple-brown: hsl(0, 0%, 8%);
+  --cream: hsl(60, 29%, 94%);
+  --warm-orange: hsl(25, 90%, 45%);
+  --forest-green: hsl(120, 61%, 34%);
+  --royal-purple: hsl(270, 50%, 40%);
+  --earth-brown: hsl(0, 0%, 8%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 8%);
+  --foreground: hsl(60, 29%, 94%);
+  --muted: hsl(0, 0%, 15%);
+  --muted-foreground: hsl(0, 0%, 60%);
+  --popover: hsl(0, 0%, 8%);
+  --popover-foreground: hsl(60, 29%, 94%);
+  --card: hsl(0, 0%, 12%);
+  --card-foreground: hsl(60, 29%, 94%);
+  --border: hsl(0, 0%, 20%);
+  --input: hsl(0, 0%, 20%);
+  --primary: hsl(43, 100%, 35%);
+  --primary-foreground: hsl(0, 0%, 8%);
+  --secondary: hsl(0, 0%, 15%);
+  --secondary-foreground: hsl(60, 29%, 94%);
+  --accent: hsl(0, 0%, 15%);
+  --accent-foreground: hsl(60, 29%, 94%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(60, 29%, 94%);
+  --ring: hsl(43, 100%, 35%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .temple-gold {
+    color: var(--temple-gold);
+  }
+
+  .bg-temple-gold {
+    background-color: var(--temple-gold);
+  }
+
+  .deep-red {
+    color: var(--deep-red);
+  }
+
+  .bg-deep-red {
+    background-color: var(--deep-red);
+  }
+
+  .temple-brown {
+    color: var(--temple-brown);
+  }
+
+  .bg-temple-brown {
+    background-color: var(--temple-brown);
+  }
+
+  .warm-orange {
+    color: var(--warm-orange);
+  }
+
+  .bg-warm-orange {
+    background-color: var(--warm-orange);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--temple-gold), var(--warm-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .pose-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .pose-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .timeline-dot {
+    position: relative;
+  }
+
+  .timeline-dot::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--temple-gold);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
